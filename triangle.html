@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>triangle</title>
+</head>
+<style>
+	.triangle {
+		width: 0;
+		height: 0;
+		border: 50px solid transparent;
+		border-right: 50px solid red;
+		position: relative;
+	}
+	.arrow {
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    border: 50px solid transparent;
+	    border-right: 49px solid #fff;
+	    top: 8px;
+	    left: 11px;
+	}
+	.triangleAgain {
+		width: 0;
+		height: 0;
+		border-top: 30px solid transparent;
+		border-left: 30px solid green;
+		border-bottom: 30px solid transparent;
+		position: relative;
+	}
+	.triangleAgain:after {
+		content: '';
+		position: absolute;
+		border-left: 29px solid gray;
+
+	}
+	.jiao {
+		position: relative;
+	    height: 0px;
+	    width: 0px;
+	    border-top: 90px solid transparent;
+	    border-right: 100px solid black;
+	    border-bottom: 100px solid transparent;
+	}
+	.jiao:after{
+	    content: '';
+	    position: absolute;
+	    top: -89px;
+	    left: 2px;
+	    border-top: 89px solid transparent;
+	    border-right: 99px solid #FFFFFF;
+	    border-bottom: 99px solid transparent;
+	}
+	.circle {
+		height: 20px;
+		width: 20px;
+		background: red;
+		border-radius: 50%;
+	}
+</style>
+<body>
+	<div class="triangle"></div>
+	<div class="arrow"></div>
+	<div class="triangleAgain"></div>
+	<div class="jiao"></div>
+	<div class="circle"></div>
+</body>
+</html>
