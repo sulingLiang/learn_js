@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>the same height and width for img and div</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.box {
+		border: 1px solid black;
+	}
+</style>
+<body>
+	<div class="box" id="box">
+		<img src="/rotation/img/a1.jpg" alt="a1.jpg" id="box_img">
+	</div>
+	<script>
+		var winHeight = window.innerHeight;
+		var winWidth = window.innerWidth;
+		var img = document.getElementById('box_img');
+		var imgWidth;
+		var imgHeight;
+		var image = new Image();
+		image.src = img.src;
+		image.onload = function(){
+			imgWidth = image.width;
+			imgHeight = image.height; 
+			if(winWidth > imgWidth){
+				var boxWidth = imgWidth + 'px';
+				document.getElementById('box').style.width = boxWidth;
+			}else{
+				var boxWidth = winWidth + 'px';
+				document.getElementById('box').style.width = boxWidth;
+			}
+			if (winHeight > imgHeight) {
+				var boxHeight = imgHeight + 'px';
+				document.getElementById('box').style.height = boxHeight;
+			}
+		}
+	</script>
+</body>
+</html>
