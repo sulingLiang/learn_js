@@ -49,15 +49,23 @@
 	    border-left: 99px solid #FFFFFF;
 	    border-bottom: 99px solid transparent;
 	}
+	.box_mask {
+		display: inline-block;
+	}
+	#box_mask1 {
+		background: red;
+	}
+	#box_mask2 {
+		background: gray;
+	}
 </style>
 <body>
 	<div class="box" id="box">
 		<img src="/rotation/img/a1.jpg" alt="a1.jpg" id="box_img">
-		<span id="box_mask1">1</span>
-		<span id="box_mask2">2</span>
+		<span id="box_mask1" class="box_mask">1</span>
+		<span id="box_mask2" class="box_mask">2</span>
 		<div class="triangle1"></div>
 		<div class="triangle2"></div>
-
 	</div>
 	<script>
 		var winHeight = window.innerHeight;
@@ -72,14 +80,16 @@
 			imgHeight = image.height; 
 			if(winWidth > imgWidth){
 				document.getElementById('box').style.width = imgWidth + 'px';
-				// var box_mask_width=document.getElementById('box_mask1').style.width = imgWidth*0.5+'px';
-				// console.log(box_mask_width);
+				document.getElementById('box_mask1').style.width = imgWidth*0.5+'px';
+				document.getElementById('box_mask2').style.width = imgWidth*0.5+'px';
 			}else{
 				imgWidth = winWidth + 'px';
 				document.getElementById('box').style.width = winWidth + 'px';
 			}
 			if (winHeight > imgHeight) {
 				document.getElementById('box').style.height = imgHeight + 'px';
+				document.getElementById('box_mask1').style.height = imgHeight + 'px';
+				document.getElementById('box_mask2').style.height = imgHeight + 'px';
 			}else{
 				// imgHeight = auto;
 				// document.getElementById('box').style.height = auto;
