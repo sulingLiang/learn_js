@@ -13,26 +13,47 @@
 		border: 1px solid black;
 		position: relative;
 	}
+
+	.arrow {
+		position: absolute;
+		top: 30%;
+		border-right: 2px solid #27ab3d;
+	    border-top: 2px solid #27ab3d;
+	    height: 10px;
+	    width: 10px;
+	    margin:50px auto 0;
+	    border-left: 2px solid transparent;
+	    border-bottom: 2px solid transparent;
+	}
+	.arrow_left {
+		transform: rotate(228deg);
+		left: 20px;
+		display: none;
+	}
+	.arrow_right {
+		transform: rotate(45deg);
+		right: 20px;
+		display: none;
+	}
 	.box_mask1 {
 		position: absolute;
-		}
+	}
+	.box_mask1:hover .arrow_left {
+		display: block;
+	}
 	.box_mask2 {
 		position: absolute;
 	}
-	.arrow_left {
-		position: absolute;
-		top: 35%;
-		color: green;
-		padding: 0 14px;
-		border-radius: 50%;
-		font-size: 50px;
+	.box_mask2:hover .arrow_right {
+		display: block;
 	}
 </style>
 <body>
 	<div class="box" id="box">
-		<div class="arrow_left"></div>
-		<div class="box_mask1" id="box_mask1"></div>
-		<div class="box_mask2" id="box_mask2"></div>
+		<div class="arrow arrow_left" id="arrow_left"></div>
+		<div class="arrow arrow_right" id="arrow_right"></div>
+		<div class="box_mask1" id="box_mask1" onmouseover="arrowShow1()" onmouseout="arrowHide1()"></div>
+		<div class="box_mask2" id="box_mask2" onmousemove="arrowShow2()" onmouseout="arrowHide2()"></div>
 		<img src="/rotation/img/a1.jpg" alt="a1.jpg" id="box_img">
 	</div>
 	<script>
@@ -63,7 +84,21 @@
 				// imgHeight = auto;
 				// document.getElementById('box').style.height = auto;
 			}
+			arrowShow1 = () => {
+				document.getElementById('arrow_left').style.display = 'block';
+			}
+			arrowHide1 = () => {
+				document.getElementById('arrow_left').style.display = 'none';
+			}
+			arrowShow2 = () => {
+				document.getElementById('arrow_right').style.display = 'block';
+			}
+			arrowHide2 = () => {
+				document.getElementById('arrow_right').style.display = 'none';
+			}
 		}
+
+		
 	</script>
 </body>
 </html>

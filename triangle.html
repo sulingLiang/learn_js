@@ -97,14 +97,31 @@
         transform: rotate(90deg);
         transform-origin: bottom;
     }*/
-
+	#demo {
+		position: relative;
+		width: 300px;
+		height: 200px;
+		border: 1px solid black;
+	}
+	.demo_span {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+	}
+	#demo-span2 {
+		left: 150px;
+	}
 </style>
 <body>
-	<div class="triangle"></div>
+	<!-- <div class="triangle"></div>
 	<div class="arrow"></div>
 	<div class="triangleAgain"></div>
 	<div class="jiao"></div>
 	<div class="circle"></div>
-	<div id="talkbubble" class="inlayer">   
+	<div id="talkbubble" class="inlayer">-->
+	<div id="demo"> 
+		<span id="demo-span1" class="demo_span">1</span>
+		<span id="demo-span2" class="demo_span">2</span>
+	</div>   
 </body>
 </html>
