@@ -38,13 +38,13 @@
 	.box_mask1 {
 		position: absolute;
 	}
-	.box_mask1:hover .arrow_left {
+	.box_mask1:hover #arrow_left {
 		display: block;
 	}
 	.box_mask2 {
 		position: absolute;
 	}
-	.box_mask2:hover .arrow_right {
+	.box_mask2:hover #arrow_right {
 		display: block;
 	}
 </style>
@@ -72,6 +72,7 @@
 				document.getElementById('box_mask1').style.width = imgWidth*0.5+'px';
 				document.getElementById('box_mask2').style.width = imgWidth*0.5+'px';
 				document.getElementById('box_mask2').style.left = imgWidth*0.5+'px';
+
 			}else{
 				imgWidth = winWidth + 'px';
 				document.getElementById('box').style.width = winWidth + 'px';

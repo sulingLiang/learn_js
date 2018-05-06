@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html data-*</title>
+</head>
+<body>
+	<ul>
+		<li onclick='showColor(this)' data-color-type='暖色调'>红色</li>
+		<li onclick='showColor(this)' data-color-type='暖色调'>绿色</li>
+		<li onclick='showColor(this)' data-color-type='冷色调'>灰色</li>
+	</ul>
+	<script>
+		showColor = (color) => {
+			var colorType = color.getAttribute('data-color-type');
+			console.log(`${color.innerHTML} 是 ${colorType}`);
+		}
+	</script>
+</body>
+</html>
