@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>keyDown</title>
+</head>
+<body>
+	<div class="chapter-controll">
+		<a href="#" id="chapterPrev">上一章</a>
+		<a href="#" id="chapterContent">目录</a>
+		<a href="#" id="chapterNext">下一章</a>
+	</div>
+	<script>
+		document.onkeydown = function(e){
+			var e = event || e; 
+			if(e.keyCode === 37){
+				console.log('上一章内容');
+			}else if(e.keyCode === 39){
+				console.log('下一章内容');
+			}
+		}
+	</script>
+</body>
+</html>
